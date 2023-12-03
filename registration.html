@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="registration.css">
+
+</head>
+<body>
+    <div class="registration">
+        <div class="registration-container">
+            <div class="registration-bcg__center"><img src="img/bcg-center.png" alt=""></div>
+            <div class="registration-bcg__left"><img src="img/bcg-left.png" alt=""></div>
+            <div class="registration-bcg__right"><img src="img/bcg-right.png" alt=""></div>
+
+            <div class="registration-wrapper">
+                <div class="registration-title">Регистрация в системе</div>
+                <form class="registration-form" action="#">
+                    <div class="registration-form__inputs">
+                        <input class="registration-form__input" name="name" id="name" required placeholder="Ваше Имя" type="text">
+                        <label class="registration-form__label" for="name"><img src="img/notice.svg" alt="">Этот логин занят другим пользователем</label>
+    
+                        <input class="registration-form__input" name="email" id="email" required placeholder="E-mail" type="email">
+                        <label class="registration-form__label" for="email"><img src="img/notice.svg" alt="">Этот email уже зарегистрирован</label>
+    
+                        <input type="password" class="registration-form__input" name="password" id="password" placeholder="Пароль">
+                        <label class="registration-form__label" for="password"><img src="img/notice.svg" alt="">Пароль менее 8 символов</label>
+
+                        <input class="registration-form__input" name="telegram" id="telegram" required placeholder="Telegram" type="text">
+                        <label class="registration-form__label" for="telegram"><img src="img/notice.svg" alt="">Этот аккаунт уже зарегистрирован</label>
+
+                    </div>
+                    <div class="registration-form__btns">
+                        <button class="registration-form__btn" id="button-submit" type="submit">Зарегистрироваться</button>
+                        <div class="registration-divider"></div>
+                        <a href="" class="registration-form__btn" id="button-link">Вход в систему</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+    </div>
+
+    <script>
+        let btnRegistration = document.querySelector('.registration-form__btn');
+
+            function showErrors() {
+            let errorLabel = document.querySelectorAll('.registration-form__label');
+            for (elem of errorLabel) {
+                elem.classList.toggle('show');
+            }
+
+            let errorInput = document.querySelectorAll('.registration-form__input');
+            for (elem of errorInput) {
+                elem.classList.toggle('error-input');
+            }
+        }	
+        btnRegistration.addEventListener('click', showErrors);
+
+    </script>
+    
+</body>
+</html>
