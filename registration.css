@@ -166,6 +166,64 @@
     display: block;
 }
 
+/* вход в систему */
+
+.black-btn {
+    background-color: #000;
+    border: none;
+}
+
+.green-btn {
+    background: linear-gradient(270deg, #4E9756 0.66%, #81E75D 98.99%);
+}
+
+.form-link {
+    text-align: center;
+    text-decoration: none;
+}
+
+.last-btn {
+    margin-bottom: 10px;
+}
+
+.enter-wrapper {
+    gap: 16px;
+}
+
+.enter-form__input {
+    margin-top: 20px;
+}
+
+.enter-form {
+    gap: 32px;
+}
+
+.enter-form__btns {
+    gap: 0;
+}
+
+.enter-divider {
+    margin: 33px 0 31px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+/* Восстановить пароль */
+
+.forgot-password-form {
+    gap: 34px;
+}
+
+.forgot-password-form__btns {
+    gap: 0;
+}
+
+.forgot-password-divider {
+    margin: 29px 0;
+}
+
 @media (max-width: 1300px) {
     .registration-bcg__center {
         width: 65%;
@@ -222,3 +280,4 @@
         gap: 0;
     }
 }
+
